@@ -67,7 +67,6 @@ export const DATA = {
     {
       company: "Finsphera",
       href: "https://finsphera.com",
-      badges: ["Fintech", "B2C/B2B"],
       location: "Mexico",
       title: "Technical Lead - Frontend",
       logoUrl: "/finsphera.svg",
@@ -96,7 +95,6 @@ export const DATA = {
     {
       company: "Finsphera",
       href: "https://finsphera.com",
-      badges: ["Fintech", "B2C/B2B"],
       location: "Mexico",
       title: "Software Engineer III - Frontend",
       logoUrl: "/finsphera.svg",
@@ -128,7 +126,6 @@ export const DATA = {
     {
       company: "Homie",
       href: "https://www.homie.mx",
-      badges: ["Real-state", "B2C"],
       location: "Mexico",
       title: "Frontend Engineer",
       logoUrl: "/homie.svg",
