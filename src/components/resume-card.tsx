@@ -17,7 +17,7 @@ interface ResumeCardProps {
   href?: string;
   badges?: readonly string[];
   period: string;
-  description?: string;
+  description?: React.ReactNode;
 }
 export const ResumeCard = ({
   logoUrl,
@@ -60,7 +60,7 @@ export const ResumeCard = ({
             <div className="flex items-center justify-between gap-x-2 text-base">
               <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
                 {title}
-                {badges && (
+                {badges && badges.length > 0 && (
                   <span className="inline-flex gap-x-1">
                     {badges.map((badge, index) => (
                       <Badge
