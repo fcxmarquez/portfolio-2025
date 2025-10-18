@@ -70,6 +70,7 @@ export const DATA = {
       location: "Mexico",
       title: "Technical Lead - Frontend",
       logoUrl: "/finsphera.svg",
+      badges: [] as const,
       start: "May 2024",
       end: "October 2025",
       description: (
@@ -98,6 +99,7 @@ export const DATA = {
       location: "Mexico",
       title: "Software Engineer III - Frontend",
       logoUrl: "/finsphera.svg",
+      badges: [] as const,
       start: "February 2023",
       end: "May 2024",
       description: (
@@ -129,6 +131,7 @@ export const DATA = {
       location: "Mexico",
       title: "Frontend Engineer",
       logoUrl: "/homie.svg",
+      badges: [] as const,
       start: "November 2021",
       end: "January 2023",
       description: (
