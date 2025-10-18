@@ -67,28 +67,28 @@ export const DATA = {
     {
       company: "Finsphera",
       href: "https://finsphera.com",
-      badges: [],
-      location: "Mexico City, Mexico (Remote)",
-      title: "Technical Lead",
+      badges: ["Fintech", "B2C/B2B"],
+      location: "Mexico",
+      title: "Technical Lead - Frontend",
       logoUrl: "/finsphera.svg",
-      start: "April 2024",
-      end: "Present",
+      start: "May 2024",
+      end: "October 2025",
       description: (
         <ul className="list-disc space-y-1 pl-4">
           <li>
-            Led a cross-functional engineering team to deliver Finsphera&apos;s
-            wealth-management orchestration platform, defining the architecture
-            across Next.js, NestJS, PostgreSQL, and AWS.
+            Managed frontend development as a direct report to CEO, driving technical roadmap for regulated fintech platform; successfully passed CNBV security audit by implementing compliance controls and conducting regulator demonstration.
           </li>
           <li>
-            Partnered with founders and product leadership to translate
-            discovery insights into quarterly roadmaps, measurable OKRs, and
-            backlog prioritization.
+            Architected company pivot to agentic AI platform using Python, CrewAI Flows, CopilotKit, and FastAPI with RAG integration, building custom chat interface with generative UI—product won 2nd place at IncMTY AirTech Challenge.
           </li>
           <li>
-            Established engineering processes, code review standards, and hiring
-            loops that reduced cycle time by 35% while improving system
-            reliability.
+            Spearheaded React-to-Next.js migration and implemented Zustand state management, improving time-to-preview and developer experience across entire platform codebase
+          </li>
+          <li>
+            Built internal operations dashboard covering KYC/KYB workflows, campaign management, withdrawal processing, and banking integration; delivered 12+ investor demos showcasing platform capabilities.
+          </li>
+          <li>
+            Established engineering frontend excellence through CI/CD pipeline (GitHub Actions + AWS Amplify), implemented Linear, code review standards, automated linting, introduced unit testing framework with React testing library and established initial test coverage; hired and mentored 1 frontend engineer.
           </li>
         </ul>
       ),
@@ -96,27 +96,31 @@ export const DATA = {
     {
       company: "Finsphera",
       href: "https://finsphera.com",
-      badges: [],
-      location: "Mexico City, Mexico (Remote)",
-      title: "Software Engineer III",
+      badges: ["Fintech", "B2C/B2B"],
+      location: "Mexico",
+      title: "Software Engineer III - Frontend",
       logoUrl: "/finsphera.svg",
-      start: "April 2023",
-      end: "April 2024",
+      start: "February 2023",
+      end: "May 2024",
       description: (
         <ul className="list-disc space-y-1 pl-4">
           <li>
-            Delivered Finsphera&apos;s multi-tenant onboarding, payroll ingestion,
-            and compliance workflows to launch the employer contributions
-            product.
+            Automated frontend service deployment to AWS Amplify using GitHub Actions CI/CD, enhancing deployment efficiency and reliability.
           </li>
           <li>
-            Built analytics and reporting experiences in React, TypeScript, and
-            TanStack Query, giving wealth managers real-time visibility into
-            client contributions and performance.
+            Developed a comprehensive component library and established the platform&apos;s design system, standardizing UI elements and improving developer efficiency.
           </li>
           <li>
-            Collaborated with design on a shared component library and
-            Storybook coverage that reduced UI regressions by 40%.
+            Led a UI overhaul focusing on mobile-first design, significantly improving user engagement and accessibility across devices.
+          </li>
+          <li>
+            Engineered key frontend self-services, including user onboarding and dashboards, using React and Redux.
+          </li>
+          <li>
+            Worked with serverless features using AWS lambdas, AppSync, Amplify, GraphQL, DynamoDB and Cognito.
+          </li>
+          <li>
+            Contributed to the regulatory approval process by implementing compliance requirements in platform architecture
           </li>
         </ul>
       ),
@@ -124,27 +128,25 @@ export const DATA = {
     {
       company: "Homie",
       href: "https://www.homie.mx",
-      badges: [],
-      location: "Mexico City, Mexico",
+      badges: ["Real-state", "B2C"],
+      location: "Mexico",
       title: "Frontend Engineer",
       logoUrl: "/homie.svg",
-      start: "April 2021",
-      end: "April 2023",
+      start: "November 2021",
+      end: "January 2023",
       description: (
         <ul className="list-disc space-y-1 pl-4">
           <li>
-            Developed Homie&apos;s property search web application with Next.js and
-            Tailwind CSS, optimizing bundle size and first contentful paint by
-            30%.
+            Led development of Homie&apos;s Component Library enhancing development efficiency by standardizing UI components for rapid project integration.
           </li>
           <li>
-            Integrated GraphQL APIs, analytics instrumentation, and A/B tests
-            that increased qualified lead conversion by 18%.
+            Bridged the gap between design and development teams by implementing a collaborative workflow through component library, significantly reducing project turnaround times.
           </li>
           <li>
-            Partnered with product and UX to launch mortgage pre-qualification
-            and appointment booking flows with responsive breakpoints across
-            desktop and mobile.
+            Mentored and integrated new team members into the development philosophy based on <strong>micro-frontend</strong> services, self component library and testing.
+          </li>
+          <li>
+            Implemented the transformation of Homie&apos;s website through the development of new microservices, using <strong>NextJs</strong>, <strong>Typescript</strong>, <strong>Redux</strong>, and <strong>Jest</strong>, improving the user experience of property rental in Mexico.
           </li>
         </ul>
       ),
