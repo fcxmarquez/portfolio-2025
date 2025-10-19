@@ -1,55 +1,85 @@
 import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
+import type { ComponentType } from "react";
+
+export type NavbarItem = {
+  href: string;
+  icon: ComponentType<{ className?: string }>;
+  label: string;
+  disabled?: boolean;
+};
 
 export const DATA = {
-  name: "Dillion Verma",
-  initials: "DV",
-  url: "https://dillion.io",
-  location: "San Francisco, CA",
-  locationLink: "https://www.google.com/maps/place/sanfrancisco",
+  name: "Francisco Márquez Soltero",
+  initials: "FMS",
+  url: "https://fcxmarquez.com",
+  location: "Mexico",
+  locationLink: "https://www.google.com/maps/place/Mexico",
   description:
-    "Software Engineer turned Entrepreneur. I love building things and helping people. Very active on Twitter.",
+    "Frontend Developer / Software Engineer focused on shipping resilient products with React, Next.js, and AWS.",
   summary:
-    "At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and competed in over 21 hackathons for fun. I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
-  avatarUrl: "/me.png",
+    "Frontend developer and software engineer leading regulated fintech experiences at [Finsphera](https://finsphera.com). I manage technical roadmaps, mentor engineers, and build AI-powered interfaces with CrewAI, CopilotKit, and FastAPI. Previously, I established design systems and component libraries at Homie, automated CI/CD with AWS Amplify, and architected responsive user journeys across B2C and B2B products. I thrive on mobile-first design, component-driven development, and cloud-native workflows with serverless AWS.",
+  avatarUrl: "https://avatar.vercel.sh/francisco-marquez?size=128",
   skills: [
     "React",
     "Next.js",
-    "Typescript",
+    "TypeScript",
+    "JavaScript",
+    "CSS3",
+    "HTML5",
+    "Redux",
+    "Zustand",
+    "Tailwind CSS",
+    "Styled Components",
+    "Storybook",
+    "Design Systems",
+    "Component Libraries",
+    "Jest",
+    "React Testing Library",
+    "Mobile-first Design",
+    "Responsive Design",
+    "AWS Lambda",
+    "AWS Amplify",
+    "DynamoDB",
+    "Cognito",
+    "AppSync",
+    "GraphQL",
     "Node.js",
     "Python",
-    "Go",
-    "Postgres",
-    "Docker",
-    "Kubernetes",
-    "Java",
-    "C++",
+    "CrewAI",
+    "CopilotKit",
+    "OpenAI API",
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
-  ],
+    {
+      href: "/blog",
+      icon: NotebookIcon,
+      label: "Blog coming soon…",
+      disabled: true,
+    },
+  ] satisfies NavbarItem[],
   contact: {
     email: "francisco.marquez.solt@gmail.com",
-    tel: "+123456789",
+    tel: "+52 3319165861",
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://dub.sh/dillion-github",
+        url: "https://github.com/fcxmarquez",
         icon: Icons.github,
 
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://dub.sh/dillion-linkedin",
+        url: "https://www.linkedin.com/in/francisco-marquez/",
         icon: Icons.linkedin,
 
         navbar: true,
       },
       email: {
         name: "Send Email",
-        url: "#",
+        url: "mailto:francisco.marquez.solt@gmail.com",
         icon: Icons.email,
 
         navbar: false,
@@ -296,3 +326,4 @@ export const DATA = {
     },
   ]
 } as const;
+
