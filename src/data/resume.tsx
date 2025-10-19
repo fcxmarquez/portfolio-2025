@@ -1,5 +1,13 @@
 import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
+import type { ComponentType } from "react";
+
+export type NavbarItem = {
+  href: string;
+  icon: ComponentType<{ className?: string }>;
+  label: string;
+  disabled?: boolean;
+};
 
 export const DATA = {
   name: "Francisco Márquez Soltero",
@@ -50,7 +58,7 @@ export const DATA = {
       label: "Blog coming soon…",
       disabled: true,
     },
-  ],
+  ] satisfies NavbarItem[],
   contact: {
     email: "francisco.marquez.solt@gmail.com",
     tel: "+52 3319165861",
