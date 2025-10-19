@@ -151,8 +151,7 @@ export const DATA = {
       school: "Self-taught",
       degree: "60+ certificate courses (Platzi, Udemy, ZeroToMastery)",
       logoUrl: "/unknown-edu.png",
-      start: "2019",
-      end: "Present",
+      start: "Continuous learning",
       href: "#",
     },
     {

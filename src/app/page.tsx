@@ -90,7 +90,11 @@ export default function Page() {
                 altText={education.school}
                 title={education.school}
                 subtitle={education.degree}
-                period={`${education.start} - ${education.end}`}
+                period={(() => {
+                  const end =
+                    "end" in education ? education.end : undefined;
+                  return end ? `${education.start} - ${end}` : education.start;
+                })()}
               />
             </BlurFade>
           ))}
@@ -211,9 +215,7 @@ export default function Page() {
                   className="text-blue-500 hover:underline"
                 >
                   {DATA.contact.email}
-                </a>{" "}
-                and I&apos;ll respond whenever I can. I will ignore all
-                soliciting.
+                </a>
               </p>
             </div>
           </BlurFade>
