@@ -150,7 +150,7 @@ export const DATA = {
       ),
     },
     {
-      company: "Homie",
+      company: "Homie.mx",
       href: "https://www.homie.mx",
       location: "Mexico",
       title: "Frontend Engineer",
