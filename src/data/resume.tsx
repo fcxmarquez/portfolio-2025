@@ -19,7 +19,7 @@ export const DATA = {
     "Frontend Developer / Software Engineer focused on shipping resilient products with React, Next.js, and AWS.",
   summary:
     "Frontend developer and software engineer leading regulated fintech experiences at [Finsphera](https://finsphera.com). I manage technical roadmaps, mentor engineers, and build AI-powered interfaces with CrewAI, CopilotKit, and FastAPI. Previously, I established design systems and component libraries at Homie, automated CI/CD with AWS Amplify, and architected responsive user journeys across B2C and B2B products. I thrive on mobile-first design, component-driven development, and cloud-native workflows with serverless AWS.",
-  avatarUrl: "https://avatar.vercel.sh/francisco-marquez?size=128",
+  avatarUrl: "/me.jpg",
   skills: [
     "React",
     "Next.js",
