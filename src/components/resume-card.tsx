@@ -30,8 +30,15 @@ export const ResumeCard = ({
   description,
 }: ResumeCardProps) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
+  const isEmptyHref = !Boolean(href);
+
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    if (isEmptyHref) {
+      e.preventDefault();
+      return;
+    }
+    
     if (description) {
       e.preventDefault();
       setIsExpanded(!isExpanded);
@@ -43,6 +50,8 @@ export const ResumeCard = ({
       href={href || "#"}
       className="block cursor-pointer"
       onClick={handleClick}
+      target="_blank"
+      rel="noopener noreferrer"
     >
       <Card className="flex">
         <div className="flex-none">
@@ -73,12 +82,14 @@ export const ResumeCard = ({
                     ))}
                   </span>
                 )}
+                {isEmptyHref ? null : (
                 <ChevronRightIcon
                   className={cn(
                     "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
                     isExpanded ? "rotate-90" : "rotate-0"
-                  )}
-                />
+                    )}
+                  />
+                )}
               </h3>
               <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
                 {period}

@@ -182,7 +182,7 @@ export const DATA = {
       degree: "60+ certificate courses (Platzi, Udemy, ZeroToMastery)",
       logoUrl: "/unknown-edu.png",
       start: "Continuous learning",
-      href: "#",
+      href: "",
     },
     {
       school: "Universidad Virtual del Estado de Guanajuato",
