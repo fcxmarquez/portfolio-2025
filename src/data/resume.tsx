@@ -18,7 +18,7 @@ export const DATA = {
   description:
     "Frontend Developer / Software Engineer focused on shipping resilient products with React, Next.js, and AWS.",
   summary:
-    "Frontend developer and software engineer leading regulated fintech experiences at [Finsphera](https://finsphera.com). I manage technical roadmaps, mentor engineers, and build AI-powered interfaces with CrewAI, CopilotKit, and FastAPI. Previously, I established design systems and component libraries at Homie, automated CI/CD with AWS Amplify, and architected responsive user journeys across B2C and B2B products. I thrive on mobile-first design, component-driven development, and cloud-native workflows with serverless AWS.",
+    "Frontend developer and software engineer with experience in regulated fintech environments and AI integration. I've built AI-powered interfaces with CrewAI, CopilotKit, and FastAPI, led frontend technical direction, and mentored engineers. I established design systems and component libraries, automated CI/CD with AWS Amplify, and architected responsive user journeys across B2C and B2B products. I thrive on mobile-first design, component-driven development, and cloud-native workflows with serverless AWS.",
   avatarUrl: "/me.jpg",
   skills: [
     "React",
@@ -167,7 +167,7 @@ export const DATA = {
             Bridged the gap between design and development teams by implementing a collaborative workflow through component library, significantly reducing project turnaround times.
           </li>
           <li>
-            Mentored and integrated new team members into the development philosophy based on <strong>micro-frontend</strong> services, self component library and testing.
+            Mentored and integrated new team members into the development philosophy based on <strong>component-driven</strong> standards, self component library and testing.
           </li>
           <li>
             Implemented the transformation of Homie&apos;s website through the development of new microservices, using <strong>NextJs</strong>, <strong>Typescript</strong>, <strong>Redux</strong>, and <strong>Jest</strong>, improving the user experience of property rental in Mexico.
