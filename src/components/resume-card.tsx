@@ -31,7 +31,9 @@ export const ResumeCard = ({
 }: ResumeCardProps) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
   const isEmptyHref = !Boolean(href);
-
+  const isExternalHref = Boolean(
+    href && (href.startsWith("http://") || href.startsWith("https://"))
+  );
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     if (isEmptyHref) {
@@ -48,10 +50,11 @@ export const ResumeCard = ({
   return (
     <Link
       href={href || "#"}
-      className="block cursor-pointer"
+      className={cn("block", isEmptyHref ? "cursor-default" : "cursor-pointer")}
       onClick={handleClick}
-      target="_blank"
-      rel="noopener noreferrer"
+      target={isExternalHref ? "_blank" : undefined}
+      rel={isExternalHref ? "noopener noreferrer" : undefined}
+      aria-disabled={isEmptyHref || undefined}
     >
       <Card className="flex">
         <div className="flex-none">
