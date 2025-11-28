@@ -18,8 +18,8 @@ export const DATA = {
   description:
     "Frontend Developer / Software Engineer focused on shipping resilient products with React, Next.js, and AWS.",
   summary:
-    "Frontend developer and software engineer leading regulated fintech experiences at [Finsphera](https://finsphera.com). I manage technical roadmaps, mentor engineers, and build AI-powered interfaces with CrewAI, CopilotKit, and FastAPI. Previously, I established design systems and component libraries at Homie, automated CI/CD with AWS Amplify, and architected responsive user journeys across B2C and B2B products. I thrive on mobile-first design, component-driven development, and cloud-native workflows with serverless AWS.",
-  avatarUrl: "https://avatar.vercel.sh/francisco-marquez?size=128",
+    "Frontend developer and software engineer with experience in regulated fintech environments and AI integration. I've built AI-powered interfaces with CrewAI, CopilotKit, and FastAPI, led frontend technical direction, and mentored engineers. I established design systems and component libraries, automated CI/CD with AWS Amplify, and architected responsive user journeys across B2C and B2B products. I thrive on mobile-first design, component-driven development, and cloud-native workflows with serverless AWS.",
+  avatarUrl: "/me.jpg",
   skills: [
     "React",
     "Next.js",
@@ -93,7 +93,7 @@ export const DATA = {
       href: "https://finsphera.com",
       location: "Mexico",
       title: "Technical Lead - Frontend",
-      logoUrl: "/finsphera.svg",
+      logoUrl: "/finsphera.png",
       badges: [] as const,
       start: "May 2024",
       end: "October 2025",
@@ -122,7 +122,7 @@ export const DATA = {
       href: "https://finsphera.com",
       location: "Mexico",
       title: "Software Engineer III - Frontend",
-      logoUrl: "/finsphera.svg",
+      logoUrl: "/finsphera.png",
       badges: [] as const,
       start: "February 2023",
       end: "May 2024",
@@ -154,7 +154,7 @@ export const DATA = {
       href: "https://www.homie.mx",
       location: "Mexico",
       title: "Frontend Engineer",
-      logoUrl: "/homie.svg",
+      logoUrl: "/homie.png",
       badges: [] as const,
       start: "November 2021",
       end: "January 2023",
@@ -167,7 +167,7 @@ export const DATA = {
             Bridged the gap between design and development teams by implementing a collaborative workflow through component library, significantly reducing project turnaround times.
           </li>
           <li>
-            Mentored and integrated new team members into the development philosophy based on <strong>micro-frontend</strong> services, self component library and testing.
+            Mentored and integrated new team members into the development philosophy based on <strong>component-driven</strong> standards, self component library and testing.
           </li>
           <li>
             Implemented the transformation of Homie&apos;s website through the development of new microservices, using <strong>NextJs</strong>, <strong>Typescript</strong>, <strong>Redux</strong>, and <strong>Jest</strong>, improving the user experience of property rental in Mexico.
@@ -182,12 +182,12 @@ export const DATA = {
       degree: "60+ certificate courses (Platzi, Udemy, ZeroToMastery)",
       logoUrl: "/unknown-edu.png",
       start: "Continuous learning",
-      href: "#",
+      href: "",
     },
     {
       school: "Universidad Virtual del Estado de Guanajuato",
       degree: "Software Engineering",
-      logoUrl: "/unknown-edu.png",
+      logoUrl: "/uveg.png",
       start: "2023",
       end: "Present",
       href: "https://uveg.edu.mx",
@@ -195,7 +195,7 @@ export const DATA = {
     {
       school: "Colegio Nacional de Educación Profesional Técnica",
       degree: "IT Technical Degree",
-      logoUrl: "/unknown-edu.png",
+      logoUrl: "/conalep.png",
       start: "2012",
       end: "2015",
       href: "https://www.conalep.edu.mx",
