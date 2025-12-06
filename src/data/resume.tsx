@@ -100,7 +100,7 @@ export const DATA = {
       description: (
         <ul className="list-disc space-y-1 pl-4">
           <li>
-            Managed frontend development as a direct report to CEO, driving technical roadmap for regulated fintech platform; successfully passed CNBV security audit by implementing compliance controls and conducting regulator demonstration.
+            Managed frontend development as a direct report to CEO, driving technical direction for regulated fintech platform; successfully passed CNBV security audit by implementing compliance controls and conducting regulator demonstration.
           </li>
           <li>
             Architected company pivot to agentic AI platform using Python, CrewAI Flows, CopilotKit, and FastAPI with RAG integration, building custom chat interface with generative UI—product won 2nd place at IncMTY AirTech Challenge.
@@ -128,9 +128,6 @@ export const DATA = {
       end: "May 2024",
       description: (
         <ul className="list-disc space-y-1 pl-4">
-          <li>
-            Automated frontend service deployment to AWS Amplify using GitHub Actions CI/CD, enhancing deployment efficiency and reliability.
-          </li>
           <li>
             Developed a comprehensive component library and established the platform&apos;s design system, standardizing UI elements and improving developer efficiency.
           </li>
@@ -170,7 +167,7 @@ export const DATA = {
             Mentored and integrated new team members into the development philosophy based on <strong>component-driven</strong> standards, self component library and testing.
           </li>
           <li>
-            Implemented the transformation of Homie&apos;s website through the development of new microservices, using <strong>NextJs</strong>, <strong>Typescript</strong>, <strong>Redux</strong>, and <strong>Jest</strong>, improving the user experience of property rental in Mexico.
+            Rebuilt Homie&apos;s website and onboarding process using <strong>NextJs</strong>, <strong>Typescript</strong>, <strong>Redux</strong>, and <strong>Jest</strong>, implementing new features and improved user flows that enhanced the property rental experience in Mexico.
           </li>
         </ul>
       ),
