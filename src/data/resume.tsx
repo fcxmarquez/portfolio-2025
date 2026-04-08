@@ -18,7 +18,7 @@ export const DATA = {
   description:
     "Frontend Developer / Software Engineer focused on shipping resilient products with React, Next.js, and AWS.",
   summary:
-    "Frontend developer and software engineer with experience in regulated fintech environments and AI integration. I've built AI-powered interfaces with CrewAI, CopilotKit, and FastAPI, led frontend technical direction, and mentored engineers. I established design systems and component libraries, automated CI/CD with AWS Amplify, and architected responsive user journeys across B2C and B2B products. I thrive on mobile-first design, component-driven development, and cloud-native workflows with serverless AWS.",
+    "Frontend and Software Engineer with experience in regulated fintech environments and AI integration. I've built AI-powered interfaces using CrewAI, CopilotKit, and FastAPI, and led frontend technical direction while collaborating closely to shape the product's overall strategy. I have established design systems and component libraries, automated CI/CD with AWS Amplify, and architected responsive user journeys across B2C and B2B products. I thrive on mobile-first design, component-driven development, and cloud-native workflows with serverless AWS.",
   avatarUrl: "/me.jpg",
   skills: [
     "React",
