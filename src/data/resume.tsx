@@ -201,11 +201,11 @@ export const DATA = {
   projects: [
     {
       title: "Circle AI",
-      href: "https://circleai-app.vercel.app/",
+      href: "https://circleai-app.vercel.app",
       dates: "2025 - Present",
       active: true,
       description:
-        "Configurable AI chat client with multi-provider support. Connects to OpenAI, Anthropic, and Google models via LangChain, and runs local inference through Ollama. Conversations and config are stored locally with no backend required.",
+        "Configurable AI chat client with multi-provider support. Connects to OpenAI, Anthropic, and Google models via LangChain, and runs local inference through Ollama. Conversations and configuration are persisted with Supabase.",
       technologies: [
         "Next.js",
         "TypeScript",
@@ -218,7 +218,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://circleai-app.vercel.app/",
+          href: "https://circleai-app.vercel.app",
           icon: <Icons.globe className="size-3" />,
         },
         {
