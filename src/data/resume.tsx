@@ -205,7 +205,7 @@ export const DATA = {
       dates: "2025 - Present",
       active: true,
       description:
-        "Configurable AI chat client with multi-provider support. Connects to OpenAI, Anthropic, and Google models via LangChain, and runs local inference through Ollama. Conversations and configuration are persisted with Supabase.",
+        "Configurable AI chat client with multi-provider support. Connects to OpenAI, Anthropic, and Google models via LangChain, and runs local inference through Ollama. Conversations and config are stored locally with no backend required.",
       technologies: [
         "Next.js",
         "TypeScript",
