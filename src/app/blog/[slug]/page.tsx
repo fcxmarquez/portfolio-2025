@@ -1,32 +1,32 @@
-import { getBlogPosts, getPost } from "@/data/blog";
-import { DATA } from "@/data/resume";
-import { formatDate } from "@/lib/utils";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
+import { getBlogPosts, getPost } from "@/data/blog";
+import { DATA } from "@/data/resume";
+import { formatDate } from "@/lib/utils";
 
 export async function generateStaticParams() {
   const posts = await getBlogPosts();
   return posts.map((post) => ({ slug: post.slug }));
 }
 
-export async function generateMetadata(
-  props: {
-    params: Promise<{
-      slug: string;
-    }>;
-  }
-): Promise<Metadata | undefined> {
+export async function generateMetadata(props: {
+  params: Promise<{
+    slug: string;
+  }>;
+}): Promise<Metadata | undefined> {
   const params = await props.params;
-  let post = await getPost(params.slug);
+  const post = await getPost(params.slug);
 
-  let {
+  const {
     title,
     publishedAt: publishedTime,
     summary: description,
     image,
   } = post.metadata;
-  let ogImage = image ? `${DATA.url}${image}` : `${DATA.url}/og?title=${title}`;
+  const ogImage = image
+    ? `${DATA.url}${image}`
+    : `${DATA.url}/og?title=${title}`;
 
   return {
     title,
@@ -52,15 +52,13 @@ export async function generateMetadata(
   };
 }
 
-export default async function Blog(
-  props: {
-    params: Promise<{
-      slug: string;
-    }>;
-  }
-) {
+export default async function Blog(props: {
+  params: Promise<{
+    slug: string;
+  }>;
+}) {
   const params = await props.params;
-  let post = await getPost(params.slug);
+  const post = await getPost(params.slug);
 
   if (!post) {
     notFound();

@@ -1,7 +1,7 @@
 "use client";
 
-import { AnimatePresence, motion, useInView } from "motion/react";
 import type { Variants } from "motion/react";
+import { AnimatePresence, motion, useInView } from "motion/react";
 import { useRef } from "react";
 
 type BlurFadeMarginValue = `${number}${"px" | "%"}`;

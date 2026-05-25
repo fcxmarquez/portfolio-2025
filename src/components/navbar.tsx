@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Dock, DockIcon } from "@/components/magicui/dock";
 import { ModeToggle } from "@/components/mode-toggle";
 import { buttonVariants } from "@/components/ui/button";
@@ -7,10 +8,9 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { DATA } from "@/data/resume";
 import type { NavbarItem } from "@/data/resume";
+import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 
 export default function Navbar() {
   return (
@@ -27,7 +27,7 @@ export default function Navbar() {
               tabIndex={-1}
               className={cn(
                 buttonVariants({ variant: "ghost", size: "icon" }),
-                "size-12 cursor-not-allowed opacity-50"
+                "size-12 cursor-not-allowed opacity-50",
               )}
             >
               <Icon className="size-4" aria-hidden="true" />
@@ -37,7 +37,7 @@ export default function Navbar() {
               href={item.href}
               className={cn(
                 buttonVariants({ variant: "ghost", size: "icon" }),
-                "size-12"
+                "size-12",
               )}
             >
               <Icon className="size-4" aria-hidden="true" />
@@ -66,7 +66,7 @@ export default function Navbar() {
                     href={social.url}
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12"
+                      "size-12",
                     )}
                   >
                     <social.icon className="size-4" />

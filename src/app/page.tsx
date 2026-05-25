@@ -1,3 +1,4 @@
+import Markdown from "react-markdown";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
@@ -5,7 +6,6 @@ import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
-import Markdown from "react-markdown";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -90,8 +90,7 @@ export default function Page() {
                 title={education.school}
                 subtitle={education.degree}
                 period={(() => {
-                  const end =
-                    "end" in education ? education.end : undefined;
+                  const end = "end" in education ? education.end : undefined;
                   return end ? `${education.start} - ${end}` : education.start;
                 })()}
               />
@@ -154,7 +153,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-      
+
       <section id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
