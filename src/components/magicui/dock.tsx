@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
 import {
   motion,
+  motionValue,
   MotionValue,
   useMotionValue,
   useSpring,
@@ -32,7 +33,7 @@ interface DockContextType {
 }
 
 const DockContext = createContext<DockContextType>({
-  mousex: { get: () => Infinity } as unknown as MotionValue<number>,
+  mousex: motionValue(Infinity),
   magnification: DEFAULT_MAGNIFICATION,
   distance: DEFAULT_DISTANCE,
 });
