@@ -3,10 +3,10 @@ import Link from "next/link";
 import React from "react";
 
 function Table({ data }: { data: { headers: string[]; rows: string[][] } }) {
-  let headers = data.headers.map((header, index) => (
+  const headers = data.headers.map((header, index) => (
     <th key={index}>{header}</th>
   ));
-  let rows = data.rows.map((row, index) => (
+  const rows = data.rows.map((row, index) => (
     <tr key={index}>
       {row.map((cell, cellIndex) => (
         <td key={cellIndex}>{cell}</td>
@@ -24,8 +24,9 @@ function Table({ data }: { data: { headers: string[]; rows: string[][] } }) {
   );
 }
 
+// biome-ignore lint/suspicious/noExplicitAny: MDX component props are untyped by design
 function CustomLink(props: any) {
-  let href = props.href;
+  const href = props.href;
 
   if (href.startsWith("/")) {
     return (
@@ -42,6 +43,7 @@ function CustomLink(props: any) {
   return <a target="_blank" rel="noopener noreferrer" {...props} />;
 }
 
+// biome-ignore lint/suspicious/noExplicitAny: MDX component props are untyped by design
 function RoundedImage(props: any) {
   return <Image alt={props.alt} className="rounded-lg" {...props} />;
 }
@@ -54,13 +56,13 @@ function slugify(str: string) {
     .trim() // Remove whitespace from both ends of a string
     .replace(/\s+/g, "-") // Replace spaces with -
     .replace(/&/g, "-and-") // Replace & with 'and'
-    .replace(/[^\w\-]+/g, "") // Remove all non-word characters except for -
-    .replace(/\-\-+/g, "-"); // Replace multiple - with single -
+    .replace(/[^\w-]+/g, "") // Remove all non-word characters except for -
+    .replace(/--+/g, "-"); // Replace multiple - with single -
 }
 
 function createHeading(level: number) {
   const Heading = ({ children }: { children: React.ReactNode }) => {
-    let slug = slugify(children as string);
+    const slug = slugify(children as string);
     return React.createElement(
       `h${level}`,
       { id: slug },

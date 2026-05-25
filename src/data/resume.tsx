@@ -1,6 +1,6 @@
-import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
 import type { ComponentType } from "react";
+import { Icons } from "@/components/icons";
 
 export type NavbarItem = {
   href: string;
@@ -100,19 +100,33 @@ export const DATA = {
       description: (
         <ul className="list-disc space-y-1 pl-4">
           <li>
-            Managed frontend development as a direct report to CEO, driving technical direction for regulated fintech platform; successfully passed CNBV security audit by implementing compliance controls and conducting regulator demonstration.
+            Managed frontend development as a direct report to CEO, driving
+            technical direction for regulated fintech platform; successfully
+            passed CNBV security audit by implementing compliance controls and
+            conducting regulator demonstration.
           </li>
           <li>
-            Architected company pivot to agentic AI platform using Python, CrewAI Flows, CopilotKit, and FastAPI with RAG integration, building custom chat interface with generative UI—product won 2nd place at IncMTY AirTech Challenge.
+            Architected company pivot to agentic AI platform using Python,
+            CrewAI Flows, CopilotKit, and FastAPI with RAG integration, building
+            custom chat interface with generative UI—product won 2nd place at
+            IncMTY AirTech Challenge.
           </li>
           <li>
-            Spearheaded React-to-Next.js migration and implemented Zustand state management, improving time-to-preview and developer experience across entire platform codebase
+            Spearheaded React-to-Next.js migration and implemented Zustand state
+            management, improving time-to-preview and developer experience
+            across entire platform codebase
           </li>
           <li>
-            Built internal operations dashboard covering KYC/KYB workflows, campaign management, withdrawal processing, and banking integration; delivered 12+ investor demos showcasing platform capabilities.
+            Built internal operations dashboard covering KYC/KYB workflows,
+            campaign management, withdrawal processing, and banking integration;
+            delivered 12+ investor demos showcasing platform capabilities.
           </li>
           <li>
-            Established engineering frontend excellence through CI/CD pipeline (GitHub Actions + AWS Amplify), implemented Linear, code review standards, automated linting, introduced unit testing framework with React testing library and established initial test coverage; hired and mentored 1 frontend engineer.
+            Established engineering frontend excellence through CI/CD pipeline
+            (GitHub Actions + AWS Amplify), implemented Linear, code review
+            standards, automated linting, introduced unit testing framework with
+            React testing library and established initial test coverage; hired
+            and mentored 1 frontend engineer.
           </li>
         </ul>
       ),
@@ -129,19 +143,25 @@ export const DATA = {
       description: (
         <ul className="list-disc space-y-1 pl-4">
           <li>
-            Developed a comprehensive component library and established the platform&apos;s design system, standardizing UI elements and improving developer efficiency.
+            Developed a comprehensive component library and established the
+            platform&apos;s design system, standardizing UI elements and
+            improving developer efficiency.
           </li>
           <li>
-            Led a UI overhaul focusing on mobile-first design, significantly improving user engagement and accessibility across devices.
+            Led a UI overhaul focusing on mobile-first design, significantly
+            improving user engagement and accessibility across devices.
           </li>
           <li>
-            Engineered key frontend self-services, including user onboarding and dashboards, using React and Redux.
+            Engineered key frontend self-services, including user onboarding and
+            dashboards, using React and Redux.
           </li>
           <li>
-            Worked with serverless features using AWS lambdas, AppSync, Amplify, GraphQL, DynamoDB and Cognito.
+            Worked with serverless features using AWS lambdas, AppSync, Amplify,
+            GraphQL, DynamoDB and Cognito.
           </li>
           <li>
-            Contributed to the regulatory approval process by implementing compliance requirements in platform architecture
+            Contributed to the regulatory approval process by implementing
+            compliance requirements in platform architecture
           </li>
         </ul>
       ),
@@ -158,16 +178,26 @@ export const DATA = {
       description: (
         <ul className="list-disc space-y-1 pl-4">
           <li>
-            Led development of Homie&apos;s Component Library enhancing development efficiency by standardizing UI components for rapid project integration.
+            Led development of Homie&apos;s Component Library enhancing
+            development efficiency by standardizing UI components for rapid
+            project integration.
           </li>
           <li>
-            Bridged the gap between design and development teams by implementing a collaborative workflow through component library, significantly reducing project turnaround times.
+            Bridged the gap between design and development teams by implementing
+            a collaborative workflow through component library, significantly
+            reducing project turnaround times.
           </li>
           <li>
-            Mentored and integrated new team members into the development philosophy based on <strong>component-driven</strong> standards, self component library and testing.
+            Mentored and integrated new team members into the development
+            philosophy based on <strong>component-driven</strong> standards,
+            self component library and testing.
           </li>
           <li>
-            Rebuilt Homie&apos;s website and onboarding process using <strong>NextJs</strong>, <strong>Typescript</strong>, <strong>Redux</strong>, and <strong>Jest</strong>, implementing new features and improved user flows that enhanced the property rental experience in Mexico.
+            Rebuilt Homie&apos;s website and onboarding process using{" "}
+            <strong>NextJs</strong>, <strong>Typescript</strong>,{" "}
+            <strong>Redux</strong>, and <strong>Jest</strong>, implementing new
+            features and improved user flows that enhanced the property rental
+            experience in Mexico.
           </li>
         </ul>
       ),
@@ -262,6 +292,5 @@ export const DATA = {
       image: "",
       video: "",
     },
-  ]
+  ],
 } as const;
-

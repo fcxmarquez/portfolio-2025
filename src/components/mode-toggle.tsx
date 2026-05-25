@@ -1,10 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
-
-import { Button } from "@/components/ui/button";
 import { LaptopIcon, MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
 
 export function ModeToggle() {
   const { theme, resolvedTheme, setTheme } = useTheme();
@@ -16,20 +15,28 @@ export function ModeToggle() {
 
   const handleToggle = () => {
     const order = ["light", "dark", "system"] as const;
-    const nextIndex = (order.indexOf((theme as typeof order[number]) ?? "system") + 1) % order.length;
+    const nextIndex =
+      (order.indexOf((theme as (typeof order)[number]) ?? "system") + 1) %
+      order.length;
     setTheme(order[nextIndex]);
   };
 
   const renderIcon = () => {
     if (theme === "system") {
-      return <LaptopIcon className="h-[1.2rem] w-[1.2rem] text-neutral-800 dark:text-neutral-200" />;
+      return (
+        <LaptopIcon className="h-[1.2rem] w-[1.2rem] text-neutral-800 dark:text-neutral-200" />
+      );
     }
 
     if (resolvedTheme === "dark") {
-      return <MoonIcon className="h-[1.2rem] w-[1.2rem] text-neutral-800 dark:text-neutral-200" />;
+      return (
+        <MoonIcon className="h-[1.2rem] w-[1.2rem] text-neutral-800 dark:text-neutral-200" />
+      );
     }
 
-    return <SunIcon className="h-[1.2rem] w-[1.2rem] text-neutral-800 dark:text-neutral-200" />;
+    return (
+      <SunIcon className="h-[1.2rem] w-[1.2rem] text-neutral-800 dark:text-neutral-200" />
+    );
   };
 
   if (!mounted) {

@@ -1,13 +1,13 @@
 "use client";
 
+import { ChevronRightIcon } from "lucide-react";
+import { motion } from "motion/react";
+import Link from "next/link";
+import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardHeader } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { motion } from "motion/react";
-import { ChevronRightIcon } from "lucide-react";
-import Link from "next/link";
-import React from "react";
 
 interface ResumeCardProps {
   logoUrl: string;
@@ -30,9 +30,9 @@ export const ResumeCard = ({
   description,
 }: ResumeCardProps) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
-  const isEmptyHref = !Boolean(href);
+  const isEmptyHref = !href;
   const isExternalHref = Boolean(
-    href && (href.startsWith("http://") || href.startsWith("https://"))
+    href && (href.startsWith("http://") || href.startsWith("https://")),
   );
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
@@ -40,7 +40,7 @@ export const ResumeCard = ({
       e.preventDefault();
       return;
     }
-    
+
     if (description) {
       e.preventDefault();
       setIsExpanded(!isExpanded);
@@ -86,10 +86,10 @@ export const ResumeCard = ({
                   </span>
                 )}
                 {isEmptyHref ? null : (
-                <ChevronRightIcon
-                  className={cn(
-                    "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
-                    isExpanded ? "rotate-90" : "rotate-0"
+                  <ChevronRightIcon
+                    className={cn(
+                      "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
+                      isExpanded ? "rotate-90" : "rotate-0",
                     )}
                   />
                 )}
