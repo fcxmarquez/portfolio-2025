@@ -2,8 +2,14 @@
 
 import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import React, { PropsWithChildren, useRef } from "react";
+import {
+  motion,
+  MotionValue,
+  useMotionValue,
+  useSpring,
+  useTransform,
+} from "motion/react";
+import React, { createContext, useContext, useRef } from "react";
 
 export interface DockProps extends VariantProps<typeof dockVariants> {
   className?: string;
@@ -19,6 +25,18 @@ const dockVariants = cva(
   "mx-auto w-max h-full p-2 flex items-end rounded-full border"
 );
 
+interface DockContextType {
+  mousex: MotionValue<number>;
+  magnification: number;
+  distance: number;
+}
+
+const DockContext = createContext<DockContextType>({
+  mousex: { get: () => Infinity } as unknown as MotionValue<number>,
+  magnification: DEFAULT_MAGNIFICATION,
+  distance: DEFAULT_DISTANCE,
+});
+
 const Dock = React.forwardRef<HTMLDivElement, DockProps>(
   (
     {
@@ -32,29 +50,18 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
   ) => {
     const mousex = useMotionValue(Infinity);
 
-    const renderChildren = () => {
-      return React.Children.map(children, (child: any) => {
-        if (React.isValidElement(child)) {
-          return React.cloneElement(child, {
-            mousex,
-            magnification,
-            distance,
-          } as DockIconProps);
-        }
-        return child;
-      });
-    };
-
     return (
-      <motion.div
-        ref={ref}
-        onMouseMove={(e) => mousex.set(e.pageX)}
-        onMouseLeave={() => mousex.set(Infinity)}
-        {...props}
-        className={cn(dockVariants({ className }))}
-      >
-        {renderChildren()}
-      </motion.div>
+      <DockContext.Provider value={{ mousex, magnification, distance }}>
+        <motion.div
+          ref={ref}
+          onMouseMove={(e) => mousex.set(e.pageX)}
+          onMouseLeave={() => mousex.set(Infinity)}
+          {...props}
+          className={cn(dockVariants({ className }))}
+        >
+          {children}
+        </motion.div>
+      </DockContext.Provider>
     );
   }
 );
@@ -65,21 +72,23 @@ export interface DockIconProps {
   size?: number;
   magnification?: number;
   distance?: number;
-  mousex?: any;
   className?: string;
   children?: React.ReactNode;
-  props?: PropsWithChildren;
+  [key: string]: unknown;
 }
 
 const DockIcon = ({
   size,
-  magnification = DEFAULT_MAGNIFICATION,
-  distance = DEFAULT_DISTANCE,
-  mousex,
+  magnification: magnificationProp,
+  distance: distanceProp,
   className,
   children,
   ...props
 }: DockIconProps) => {
+  const { mousex, magnification, distance } = useContext(DockContext);
+  const mag = magnificationProp ?? magnification;
+  const dist = distanceProp ?? distance;
+
   const ref = useRef<HTMLDivElement>(null);
 
   const distanceCalc = useTransform(mousex, (val: number) => {
@@ -87,13 +96,13 @@ const DockIcon = ({
     return val - bounds.x - bounds.width / 2;
   });
 
-  let widthSync = useTransform(
+  const widthSync = useTransform(
     distanceCalc,
-    [-distance, 0, distance],
-    [40, magnification, 40]
+    [-dist, 0, dist],
+    [40, mag, 40]
   );
 
-  let width = useSpring(widthSync, {
+  const width = useSpring(widthSync, {
     mass: 0.1,
     stiffness: 150,
     damping: 12,
@@ -107,7 +116,7 @@ const DockIcon = ({
         "flex aspect-square cursor-pointer items-center justify-center rounded-full",
         className
       )}
-      {...props}
+      {...(props as Record<string, unknown>)}
     >
       {children}
     </motion.div>
