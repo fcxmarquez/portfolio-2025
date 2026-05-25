@@ -75,7 +75,6 @@ export interface DockIconProps {
   distance?: number;
   className?: string;
   children?: React.ReactNode;
-  [key: string]: unknown;
 }
 
 const DockIcon = ({
@@ -113,7 +112,7 @@ const DockIcon = ({
         "flex aspect-square cursor-pointer items-center justify-center rounded-full",
         className,
       )}
-      {...(props as Record<string, unknown>)}
+      {...props}
     >
       {children}
     </motion.div>
