@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "biome lint .",
     "format": "biome format --write .",
-    "check": "biome check --write ."
+    "check": "biome check --write .",
+    "validate": "biome lint . && biome check . && next build"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.11",

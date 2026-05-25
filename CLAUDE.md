@@ -43,4 +43,8 @@ Package manager is **pnpm**. There are no tests configured.
 
 - Follows @commitlint/config-conventional standards
 - The commit doesn't have to have a body. Has to be brief. Don't mention you as co-author in the commit message.
-- Don't push commits at least the user explicitly asks for it.
+- Don't create commits unless the user explicitly asks for it.
+
+### Testing and quality
+
+- After finishing a task, run `pnpm validate` to ensure the code is valid and the build is successful.
