@@ -1,4 +1,4 @@
-import Navbar from "@/components/navbar";
+import NavbarClient from "@/components/navbar-client";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
@@ -65,7 +65,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <TooltipProvider delayDuration={0}>
             {children}
-            <Navbar />
+            <NavbarClient />
           </TooltipProvider>
         </ThemeProvider>
         <Analytics />
