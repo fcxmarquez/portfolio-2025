@@ -94,7 +94,7 @@ export const DATA = {
       location: "Guadalajara, Mexico · Remote",
       title: "Software Engineer",
       logoUrl: "/epam.svg",
-      badges: ["Remote"] as const,
+      badges: [] as const,
       start: "September 2026",
       end: "Present",
       description: (
