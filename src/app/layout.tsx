@@ -16,15 +16,15 @@ const fontSans = FontSans({
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
-    default: `${DATA.name} | Frontend Developer / Software Engineer`,
+    default: `${DATA.name} | Software Engineer`,
     template: `%s | ${DATA.name}`,
   },
   description: DATA.description,
   openGraph: {
-    title: `${DATA.name} | Frontend Developer / Software Engineer`,
+    title: `${DATA.name} | Software Engineer`,
     description: DATA.description,
     url: DATA.url,
-    siteName: `${DATA.name} | Frontend Developer / Software Engineer`,
+    siteName: `${DATA.name} | Software Engineer`,
     locale: "en_US",
     type: "website",
   },
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: `${DATA.name} | Frontend Developer / Software Engineer`,
+    title: `${DATA.name} | Software Engineer`,
     card: "summary_large_image",
   },
   verification: {

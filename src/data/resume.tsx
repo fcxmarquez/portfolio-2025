@@ -16,9 +16,9 @@ export const DATA = {
   location: "Mexico",
   locationLink: "https://www.google.com/maps/place/Mexico",
   description:
-    "Frontend Developer / Software Engineer focused on shipping resilient products with React, Next.js, and AWS.",
+    "Software Engineer at EPAM Systems, focused on shipping resilient products with React, Next.js, and AWS.",
   summary:
-    "Frontend and Software Engineer with experience in regulated fintech environments and AI integration. I've built AI-powered interfaces using CrewAI, CopilotKit, and FastAPI, and led frontend technical direction while collaborating closely to shape the product's overall strategy. I have established design systems and component libraries, automated CI/CD with AWS Amplify, and architected responsive user journeys across B2C and B2B products. I thrive on mobile-first design, component-driven development, and cloud-native workflows with serverless AWS.",
+    "Software Engineer at EPAM Systems, working remotely from Guadalajara. I previously led frontend technical direction in regulated fintech and built AI-powered interfaces using CrewAI, CopilotKit, and FastAPI. I have established design systems and component libraries, automated CI/CD with AWS Amplify, and architected responsive user journeys across B2C and B2B products. I thrive on mobile-first design, component-driven development, and cloud-native workflows with serverless AWS.",
   avatarUrl: "/me.jpg",
   skills: [
     "React",
@@ -89,6 +89,24 @@ export const DATA = {
 
   work: [
     {
+      company: "EPAM Systems",
+      href: "https://www.epam.com",
+      location: "Guadalajara, Mexico · Remote",
+      title: "Software Engineer",
+      logoUrl: "/epam.svg",
+      badges: [] as const,
+      start: "September 2026",
+      end: "Present",
+      description: (
+        <ul className="list-disc space-y-1 pl-4">
+          <li>
+            Full-time software engineering, remote from the Guadalajara
+            metropolitan area.
+          </li>
+        </ul>
+      ),
+    },
+    {
       company: "Finsphera",
       href: "https://finsphera.com",
       location: "Mexico",
@@ -96,7 +114,7 @@ export const DATA = {
       logoUrl: "/finsphera.png",
       badges: [] as const,
       start: "May 2024",
-      end: "October 2025",
+      end: "September 2025",
       description: (
         <ul className="list-disc space-y-1 pl-4">
           <li>
